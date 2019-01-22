@@ -66,3 +66,9 @@ def current_player(board)
     "O"
   end
 end
+
+def won?(board)
+  WIN_COMBINATIONS.detect do |combo|
+    
+  end
+end
