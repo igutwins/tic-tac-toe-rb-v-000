@@ -43,7 +43,7 @@ def move(board,index,character) #OK
 end
 
 def turn(board)
-  puts "Enter 1-9"
+  puts "Please enter 1-9:"
   input = gets.strip
   index = input_to_index(input)
   if turn_count(board) % 2 == 0
