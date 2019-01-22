@@ -56,7 +56,7 @@ end
 def turn_count(board)
   board.count do |token|
     token == "X" || token == "O"
-  end 
+  end
 end
 
 def current_player(board)
