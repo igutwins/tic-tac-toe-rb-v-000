@@ -21,7 +21,6 @@ def input_to_index(input) #OK
   input.to_i - 1
 end
 
-
 def position_taken?(board,index) #OK
   if board[index] == " " || board[index] == ""
     false
@@ -55,10 +54,11 @@ def turn(board)
 end
 
 def turn_count(board)
-  count = 0
-  board.all? do |squares|
-    if squares != "" && squares != " "
-      count += 1
-  end
+  board.count do |token|
+    token == "X" || token == "O"
+  end 
 end
+
+def current_player(board)
+  turn_count(board)
 end
