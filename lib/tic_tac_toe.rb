@@ -74,3 +74,9 @@ def won?(board)
     position_taken?(board,combo[0])
   end
 end
+
+def full?(board)
+  board.all do |token|
+    token == "X" || token == "O"
+  end 
+end 
