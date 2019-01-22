@@ -46,7 +46,11 @@ def turn(board)
   puts "Enter 1-9"
   input = gets.strip
   index = input_to_index(input)
-  character = "X"
+  if turn_count(board) % 2 == 0
+    character = "O"
+  else
+    character = "X"
+  end
   move(board,index,character)
   display_board(board)
 end
